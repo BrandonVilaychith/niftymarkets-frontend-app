@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Route, Switch } from "react-router-dom";
+
+// Components
+import Navigation from "./components/Navigation.js";
+import HomePage from "./components/HomePage.js";
+import ProfilePage from "./components/Profile/ProfilePage.js";
 
 class App extends Component {
 	render() {
-		console.log(this.props);
 		return (
 			<div className='App'>
-				{this.props.items.map(item => (
-					<p>{item}</p>
-				))}
+				<Navigation />
+				<Switch>
+					<Route exact path='/' component={HomePage} />
+					<Route path='/profile' component={ProfilePage} />
+				</Switch>
 			</div>
 		);
 	}
