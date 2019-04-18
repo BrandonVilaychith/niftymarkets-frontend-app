@@ -31,7 +31,7 @@ const Navigation = () => {
 				</NavbarBrand>
 				<NavbarToggler onClick={toggle} />
 				<Collapse isOpen={isOpen} navbar>
-					<Nav className='ml-auto' className='text-white' navbar>
+					<Nav className='ml-auto text-white' navbar>
 						<NavItem>
 							<NavLink href='/components/'>Home</NavLink>
 						</NavItem>
